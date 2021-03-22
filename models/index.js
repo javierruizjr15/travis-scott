@@ -1,7 +1,17 @@
 const User = require('./User.js')
-const Blog = require('./Blog.js')
+const musicBlog = require('./musicBlog.js')
+const merchBlog = require('./merchBlog.js')
+const foodBevBlog =  require('./foodBevBlog.js')
 
-User.hasMany(Blog, {foreignKey:'uid'})
-Blog.belongsTo(User,{foreignKey:'uid'})
+User.hasMany(musicBlog, {foreignKey:'uid'})
+musicBlog.belongsTo(User,{foreignKey:'uid'})
 
-module.exports={User,Blog}
+User.hasMany(merchBlog, { foreignKey: 'uid' })
+merchBlog.belongsTo(User, { foreignKey: 'uid' })
+
+User.hasMany(foodBevBlog, { foreignKey: 'uid' })
+foodBevBlog.belongsTo(User, { foreignKey: 'uid' })
+
+
+
+module.exports={User,musicBlog,merchBlog,foodBevBlog}
