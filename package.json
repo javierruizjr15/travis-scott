@@ -1,0 +1,27 @@
+{
+  "name": "travis-scott",
+  "version": "1.0.0",
+  "description": "Project 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willram24/travis-scott.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willram24/travis-scott/issues"
+  },
+  "homepage": "https://github.com/willram24/travis-scott#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "passport-local-sequelize": "^0.9.0",
+    "sequelize": "^6.6.1"
+  }
+}
