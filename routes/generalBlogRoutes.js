@@ -16,7 +16,7 @@ router.get('/generalBlogs/:id', passport.authenticate('jwt'), (req, res) => {
 })
 
 // POST one generalBlog
-router.post('/generalBlogs', (req, res) => {
+router.post('/generalBlogs', passport.authenticate('jwt'), (req, res) => {
   generalBlog.create({
     title:req.body.title,
     content:req.body.content,
