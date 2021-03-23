@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const { join } = require('path')
 const passport = require('passport')
-const {User,Blog}=require('./models')
+const { User, foodBevBlog, merchBlog, musicBlog}=require('./models')
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
 
 const app = express()
@@ -22,10 +22,10 @@ passport.deserializeUser(User.deserializeUser())
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: process.env.SECRET
-}, ({ id }, cb) => User.findOne({ where: { id }, include: [Item] })
+}, ({ id }, cb) => User.findOne({ where: { id }, include: [foodBevBlog, merchBlog, musicBlog] })
   .then(user => cb(null, user))
   .catch(err => cb(err))))
-
+// when it finds the user it pulls the data from theo models associated with the user
 
 app.use(require('./routes'))
 
