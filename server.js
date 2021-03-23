@@ -25,7 +25,7 @@ passport.use(new JWTStrategy({
 }, ({ id }, cb) => User.findOne({ where: { id }, include: [foodBevBlog, merchBlog, musicBlog] })
   .then(user => cb(null, user))
   .catch(err => cb(err))))
-
+// when it finds the user it pulls the data from theo models associated with the user
 
 app.use(require('./routes'))
 
