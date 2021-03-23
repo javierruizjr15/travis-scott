@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const { Blog } = require('../models')
 
-router.post('/songs', (req, res) => {
+router.post('/generalBlog', (req, res) => {
   Blog.destory({where: {} })
   .then(() => {
     Blog.bulkCreate([
