@@ -1,0 +1,36 @@
+html {
+  background-color: rgb(142, 126, 112);
+  /* rgb(247, 211, 158) */
+}
+
+.nav-wrapper {
+  background-color: rgb(142, 126, 112);
+}
+
+.hover:hover {
+  text-decoration: line-through;
+  text-decoration-color: solid black;
+  text-decoration-thickness: 1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-container {
+  height: vh;
+}
+
+section {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .content {
+  max-width: 1000px;
+  margin: 0 auto
+}
