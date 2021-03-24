@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const { foodBevBlog } = require('../models')
+const passport = require('passport')
+const jwt = require('jsonwebtoken')
 
 // GET all foodBevBlogs
 router.get('/foodBevBlogs', passport.authenticate('jwt'), (req, res) => {
