@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const { merchBlog } = require('../models')
+const passport = require('passport')
+const jwt = require('jsonwebtoken')
 
 // GET all merchBlogs
 router.get('/merchBlogs', passport.authenticate('jwt'), (req, res) => {
