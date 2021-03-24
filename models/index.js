@@ -2,7 +2,7 @@ const User = require('./User.js')
 const musicBlog = require('./musicBlog.js')
 const merchBlog = require('./merchBlog.js')
 const foodBevBlog = require('./foodBevBlog.js')
-const generalBlog = require ('./generalBlog.js')
+const generalBlog = require('./generalBlog.js')
 
 User.hasMany(musicBlog, { foreignKey: 'uid' })
 musicBlog.belongsTo(User, { foreignKey: 'uid' })
