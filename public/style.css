@@ -1,0 +1,72 @@
+html {
+  background-color:darkgray;
+}
+
+.navbarBackground {
+  background-color:darkgray;
+}
+
+.containerWhite {
+  background-color: white;
+}
+
+.hover:hover {
+  text-decoration: line-through;
+  text-decoration-color: solid black;
+  text-decoration-thickness: 1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-container {
+  height: 100%vh;
+}
+
+section {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .content {
+  max-width: 1000px;
+  margin: 0 auto
+}
+
+.space {
+  margin-top: 3%;
+}
+/*start login additions */
+
+#loginimg {
+  background-image: url('./assets/images/Fortnite\ 4k.jpg');
+  background-position: center top;
+  width: 100%;
+}
+
+.loginBackG {
+  background-color: aliceblue;
+  padding-bottom: 7px;
+}
+
+#loginPush {
+  margin-top: 5%;
+}
+
+/* .card-img-sizing {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 0px) (max-width: 475px) {
+  .card-img-sizing {
+    height: 250px;
+  } */
+
+  /* end login additions */
