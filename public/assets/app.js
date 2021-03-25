@@ -19,9 +19,15 @@ const axios = window.axios
 document.getElementById('addGeneralBlog').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/generalBlogs', {
+    
     title: document.getElementById('addTitle').value,
-    content: document.getElementById('addContent').value
+    content: document.getElementById('addContent').value},
+    {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
   })
+    
     .then(({ data: generalBlog }) => {
       const blogElem = document.createElement('div')
       blogElem.className = 'generalBlogDiv'
@@ -34,7 +40,6 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
     <button class="btn btn-danger deletegeneralBlog" data-id="${generalBlog.id}">Delete</button>
     <hr>
     `
-
     document.getElementById('generalBlogs').append(blogElem)
     document.getElementById('title').value = ''
     document.getElementById('content').value = ''
