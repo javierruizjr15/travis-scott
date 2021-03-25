@@ -20,8 +20,7 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/generalBlogs', {
     title: document.getElementById('title').value,
-    content: document.getElementById('content').value,
-    name: document.getElementById('name').value
+    content: document.getElementById('content').value
   })
     .then(({ data: generalBlog }) => {
       const blogElem = document.createElement('div')
@@ -38,7 +37,6 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
 
     document.getElementById('generalBlogs').append(blogElem)
     document.getElementById('title').value = ''
-    document.getElementById('name').value = ''
     document.getElementById('content').value = ''
     })
     .catch(err => console.error(err))
