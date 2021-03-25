@@ -2,19 +2,19 @@ const { generalBlog } = require("../../models")
 
 const axios = window.axios
 
-// const getBlogs = () => {
-//   axios.get('/api/generalBlogs')
-//     .then(({ data: generalBlogs}) => {
-//       document.getElementById('generalBlogs').innerHTML = ''
-//       generalBlogs.forEach(generalBlog => {
-//         const blogElem = document.createElement('div')
-//         blogElem.innerHTML = `
-//         <p>Title: ${generalBlog.title}</p>
-//         <p>Content: ${generalBlog.content}</p>
-//         <p>Username: ${generalBlog.username}</p>`
-//       })
-//     })
-// }
+const getGeneralBlogs = () => {
+  axios.get('/api/generalBlogs')
+    .then(({ data: generalBlogs}) => {
+      document.getElementById('generalBlogs').innerHTML = ''
+      generalBlogs.forEach(generalBlog => {
+        const blogElem = document.createElement('div')
+        blogElem.innerHTML = `
+        <p>Title: ${generalBlog.title}</p>
+        <p>Content: ${generalBlog.content}</p>
+        <p>Username: ${generalBlog.username}</p>`
+      })
+    })
+}
 
 document.getElementById('addGeneralBlog').addEventListener('click', event => {
   event.preventDefault()
@@ -34,7 +34,7 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
       blogElem.innerHTML = `
     <hr>
     <p>Title: ${generalBlog.title}</p>
-    <p>Name: ${generalBlog.name}</p>
+    <p>Name: test </p>
     <p>Content: ${generalBlog.content}</p>
     <button class="btn btn-warning" data-bs-target="#updateModal" data-bs-toggle="modal" data-id="${generalBlog.id}">Update</button>
     <button class="btn btn-danger deletegeneralBlog" data-id="${generalBlog.id}">Delete</button>
@@ -46,3 +46,5 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
     })
     .catch(err => console.error(err))
 })
+
+getBlogs()
