@@ -37,7 +37,7 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
     <p>Name: test </p>
     <p>Content: ${generalBlog.content}</p>
     <button class="btn btn-warning" data-bs-target="#updateModal" data-bs-toggle="modal" data-id="${generalBlog.id}">Update</button>
-    <button class="btn btn-danger deletegeneralBlog" data-id="${generalBlog.id}">Delete</button>
+    <button class="btn btn-danger deleteGeneralBlog" data-id="${generalBlog.id}">Delete</button>
     <hr>
     `
     document.getElementById('generalBlogs').append(blogElem)
@@ -47,4 +47,18 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
     .catch(err => console.error(err))
 })
 
-getBlogs()
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('deleteGeneralBlog')) {
+    const id = event.target.dataset.id
+    axios.delete(`/api/generalBlogs/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }})
+      .then(() => {
+        event.target.parentNode.remove()
+      })
+      .catch(err => console.error(err))
+  }
+})
+
+//getGeneralBlogs()
