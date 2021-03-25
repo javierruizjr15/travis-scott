@@ -13,7 +13,7 @@
 <body>
   <!--NavBar code-->
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper navbarBackground">
       <a href="./index.html" class="black-text brand-logo"> <img
           src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cactus_Jack_Records_-_Logo.svg" alt=""
           style="width: 75px; height: 50px;"></a>
@@ -29,31 +29,18 @@
     <div class="parallax"><img src="assets/images/img1.jpeg"></div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <form class="col">
-          <div class="input-field col s6">
-            <input id="titleContent" type="text" class="validate">
-            <label for="title">Title</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="Name" type="text" class="validate">
-            <label for="Name">Name</label>
-          </div>
-          <div class="input-field col s12">
-            <input id="content" type="text" class="validate">
-            <label id="content" class="centerfor=" content">Content</label>
-            <button id="addGeneralBlog" type="submit" class="btn red accent-3">Add Post</button>
-          <div id="generalBlogs"></div>
-          </div>
-          <!-- <div class="col s6">
-            <img src="assets/images/cactusShoes.jpeg" alt="Cactus">
-          </div> -->
-        </div>
-      </form>
+  <!-- POSTING BLOGS DIV -->
+  <div class="container space origin">
+    <div class="row containerWhite">
+      <div class="col s12">
+        <input id="addTitle" placeholder="title" type="text">
+        <input id="addContent" placeholder="content" type="text">
+        <button id="addGeneralBlog" type="submit" class="btn red accent-3">Post</button>
+      </div>
+      <div class="generBlogDiv col s6 space">Populated Posted General Blogs</div>
+      <img class='col s6 space' src="assets/images/cactusShoes.jpeg" alt="cactusShoes">
     </div>
-
-
+    </div>
 
 
 
@@ -81,7 +68,7 @@
     <div class="parallax"><img src="assets/images/img3.jpeg"></div>
   </div> -->
 
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

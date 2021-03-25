@@ -1,10 +1,13 @@
 html {
-  background-color: rgb(142, 126, 112);
-  /* rgb(247, 211, 158) */
+  background-color:darkgray;
 }
 
-.nav-wrapper {
-  background-color: rgb(142, 126, 112);
+.navbarBackground {
+  background-color:darkgray;
+}
+
+.containerWhite {
+  background-color: white;
 }
 
 .hover:hover {
@@ -19,7 +22,7 @@ body {
 }
 
 .parallax-container {
-  height: vh;
+  height: 100%vh;
 }
 
 section {
@@ -33,4 +36,8 @@ section {
 section .content {
   max-width: 1000px;
   margin: 0 auto
+}
+
+.space {
+  margin-top: 3%;
 }
