@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/style/style.css">
 </head>
+
 <body>
   <!--NavBar code-->
   <nav>
-    <div class="nav-wrapper">
-      <a href="./index.html" class="brand-logo">Home</a>
+    <div class="nav-wrapper navbarBackground">
+      <a href="./index.html" class="black-text brand-logo"> <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cactus_Jack_Records_-_Logo.svg" alt=""
+          style="width: 75px; height: 50px;"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="./musicBlog.html">Music</a></li>
-        <li><a href="./merchBlog.html">Merch</a></li>
-        <li><a href="./foodAndBev.html">Food and Beverages</a></li>
+        <li class='tab hover'><a class="black-text" href="./musicBlog.html">Music</a></li>
+        <li class='tab hover'><a class="black-text" href="./merchBlog.html">Merch</a></li>
+        <li class='tab hover'><a class="black-text" href="./foodAndBev.html">Food and Beverages</a></li>
       </ul>
     </div>
   </nav>
 
-  <h1>Music </h1>
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/img1.jpeg"></div>
+  </div>
+
+  <!-- POSTING BLOGS DIV -->
+  <div class="container space origin">
+    <div class="row containerWhite">
+      <div class="col s12">
+        <input id="addTitle" placeholder="title" type="text">
+        <input id="addContent" placeholder="content" type="text">
+        <button id="addMusicBlog" type="submit" class="btn red accent-3">Post</button>
+      </div>
+      <div class="generalBlogDiv col s6 space" id="musicBlogs">Populated Posted General Blogs</div>
+      <img class='col s6 space' src="assets/images/cactusShoes.jpeg" alt="cactusShoes">
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-</html>
+  <script>
+    $(document).ready(function () {
+      $('.parallax').parallax();
+    });
+  </script>
+  <script src='./assets/js/musicBlog.js'></script>
+  </body>
+  
+  </html>
