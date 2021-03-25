@@ -1,4 +1,4 @@
-const { generalBlog } = require("../../models")
+const { generalBlog } = require("../../../models")
 
 const axios = window.axios
 
