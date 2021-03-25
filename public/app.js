@@ -48,7 +48,10 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
 document.addEventListener('click', event => {
   if (event.target.classList.contains('deleteGeneralBlog')) {
     const id = event.target.dataset.id
-    axios.delete(`/api/generalBlogs/${id}`)
+    axios.delete(`/api/generalBlogs/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }})
       .then(() => {
         event.target.parentNode.remove()
       })
@@ -56,4 +59,4 @@ document.addEventListener('click', event => {
   }
 })
 
-getGeneralBlogs()
+//getGeneralBlogs()
