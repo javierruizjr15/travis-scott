@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cactus Jack</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!--NavBar code-->
+  <nav>
+    <div class="nav-wrapper navbarBackground">
+      <a href="./index.html" class="black-text brand-logo"> <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cactus_Jack_Records_-_Logo.svg" alt=""
+          style="width: 75px; height: 50px;"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class='tab hover'><a class="black-text" href="./musicBlog.html">Music</a></li>
+        <li class='tab hover'><a class="black-text" href="./merchBlog.html">Merch</a></li>
+        <li class='tab hover'><a class="black-text" href="./foodAndBev.html">Food and Beverages</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/img1.jpeg"></div>
+  </div>
+
+  <!-- POSTING BLOGS DIV -->
+  <div class="container space origin">
+    <div class="row containerWhite">
+      <div class="col s12">
+        <input id="addTitle" placeholder="title" type="text">
+        <input id="addContent" placeholder="content" type="text">
+        <button id="addFoodBevBlog" type="submit" class="btn red accent-3">Post</button>
+      </div>
+      <div class="foodBevDiv col s6 space" id='foodBevBlogs'>Populated Posted General Blogs</div>
+      <img class='col s6 space' src="assets/images/cactusShoes.jpeg" alt="cactusShoes">
+    </div>
+  </div>
+
+
+
+  <!-- <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/img1.jpeg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Travis Scott Bio</h2>
+      <p class="grey-text text-darken-3 lighten-3">Jacques Bermon Webster II, (born April 30, 1991) known professionally as Travis Scott (formerly stylized as Travi$
+      Scott), is an American rapper, singer, songwriter, and record producer. Scott's musical style has been described as a
+      fusion of traditional rap, hip hop, lo-fi and ambient.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/img2.png"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Ayeee Lmaoooooo</h2>
+      <p class="grey-text text-darken-3 lighten-3">Yo this really be lit af</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/img3.jpeg"></div>
+  </div> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.parallax').parallax();
+    });
+  </script>
+  <script src='./foodAndBev.js'></script>
+</body>
+
+</html>
