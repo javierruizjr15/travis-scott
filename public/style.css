@@ -1,9 +1,9 @@
 html {
-  background-color: rgb(142, 126, 112)
+  background-color:darkgray;
 }
 
-.earthyBrown {
-  background-color: rgb(142, 126, 112);
+.navbarBackground {
+  background-color:darkgray;
 }
 
 .containerWhite {
@@ -22,7 +22,7 @@ body {
 }
 
 .parallax-container {
-  height: vh;
+  height: 100%vh;
 }
 
 section {
