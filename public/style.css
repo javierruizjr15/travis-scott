@@ -41,3 +41,32 @@ section .content {
 .space {
   margin-top: 3%;
 }
+/*start login additions */
+
+#loginimg {
+  background-image: url('./assets/images/Fortnite\ 4k.jpg');
+  background-position: center top;
+  width: 100%;
+}
+
+.loginBackG {
+  background-color: aliceblue;
+  padding-bottom: 7px;
+}
+
+#loginPush {
+  margin-top: 5%;
+}
+
+/* .card-img-sizing {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 0px) (max-width: 475px) {
+  .card-img-sizing {
+    height: 250px;
+  } */
+
+  /* end login additions */
