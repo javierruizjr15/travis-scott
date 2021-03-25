@@ -17,8 +17,8 @@ const axios = window.axios
 document.getElementById('addGeneralBlog').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/generalBlogs', {
-    title: document.getElementById('title').value,
-    content: document.getElementById('content').value
+    title: document.getElementById('addTitle').value,
+    content: document.getElementById('addContent').value
   })
     .then(({ data: generalBlog }) => {
       const blogElem = document.createElement('div')
