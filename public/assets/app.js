@@ -1,8 +1,5 @@
-<<<<<<< HEAD:public/assets/app.js
 const { generalBlog } = require("../../models")
 
-=======
->>>>>>> 5535908e23f9dc704608e1b0ae7eaa379edf871f:public/app.js
 const axios = window.axios
 
 // const getBlogs = () => {
