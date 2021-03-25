@@ -1,5 +1,3 @@
-const { generalBlog } = require("../../../models")
-
 const axios = window.axios
 
 const getGeneralBlogs = () => {
