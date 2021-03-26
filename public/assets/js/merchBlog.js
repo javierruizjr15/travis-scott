@@ -1,17 +1,29 @@
 const axios = window.axios
 
+let currentUser = localStorage.getItem('currentUser')
+
 const getMerchBlogs = () => {
-  axios.get('/api/merchBlogs')
+  axios.get('/api/merchBlogs', {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
     .then(({ data: merchBlogs }) => {
       document.getElementById('merchBlogs').innerHTML = ''
       merchBlogs.forEach(merchBlog => {
         const blogElem = document.createElement('div')
+        blogElem.className = 'merchBlogDiv'
         blogElem.innerHTML = `
         <p>Title: ${merchBlog.title}</p>
         <p>Content: ${merchBlog.content}</p>
-        <p>Username: ${merchBlog.username}</p>`
+        <p>Username: ${currentUser}</p>
+        <button class="btn btn-danger deleteMerchBlog" data-id="${merchBlog.id}">Delete</button>
+        <hr>
+        `
+        document.getElementById('merchBlogs').prepend(blogElem)
       })
     })
+    .catch(err => console.error(err))
 }
 
 document.getElementById('addMerchBlog').addEventListener('click', event => {
@@ -31,17 +43,15 @@ document.getElementById('addMerchBlog').addEventListener('click', event => {
       const blogElem = document.createElement('div')
       blogElem.className = 'merchBlogDiv'
       blogElem.innerHTML = `
-    <hr>
     <p>Title: ${merchBlog.title}</p>
     <p>Name: test </p>
     <p>Content: ${merchBlog.content}</p>
-    <button class="btn btn-warning" data-bs-target="#updateModal" data-bs-toggle="modal" data-id="${merchBlog.id}">Update</button>
     <button class="btn btn-danger deleteMerchBlog" data-id="${merchBlog.id}">Delete</button>
     <hr>
     `
       document.getElementById('merchBlogs').append(blogElem)
-      document.getElementById('title').value = ''
-      document.getElementById('content').value = ''
+      document.getElementById('addTitle').value = ''
+      document.getElementById('addContent').value = ''
     })
     .catch(err => console.error(err))
 })
@@ -61,4 +71,4 @@ document.addEventListener('click', event => {
   }
 })
 
-//getMerchBlogs()
+getMerchBlogs()
