@@ -14,6 +14,7 @@ const getGeneralBlogs = () => {
         const blogElem = document.createElement('div')
         blogElem.className = 'generalBlogDiv'
         blogElem.innerHTML = `
+        
         <p>Title: ${generalBlog.title}</p>
         <p>Content: ${generalBlog.content}</p>
         <p>Username: ${currentUser}</p>
