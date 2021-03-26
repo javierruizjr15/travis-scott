@@ -1,9 +1,9 @@
 html {
-  background-color:darkgray;
+  background-color: darkgray;
 }
 
 .navbarBackground {
-  background-color:darkgray;
+  background-color: darkgray;
 }
 
 .containerWhite {
@@ -41,6 +41,7 @@ section .content {
 .space {
   margin-top: 3%;
 }
+
 /*start login additions */
 
 #loginimg {
@@ -58,16 +59,16 @@ section .content {
   margin-top: 5%;
 }
 
-/* .card-img-sizing {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
+/* end login additions */
+
+/* start register additions */
+
+#registerimg {
+  background-image: url('../images/mirror\ cropped\ astronomical.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
-@media only screen and (min-width: 0px) (max-width: 475px) {
-  .card-img-sizing {
-    height: 250px;
-  } */
-
-  /* end login additions */
-  /* end login additions */
+/* end register additions */
