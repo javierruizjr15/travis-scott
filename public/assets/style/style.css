@@ -1,13 +1,13 @@
 html {
-  background-color:darkgray;
+  background-color: rgb(219, 177, 114);
 }
 
 .navbarBackground {
-  background-color:darkgray;
+  background-color: rgb(219, 177, 114);
 }
 
 .containerWhite {
-  background-color: white;
+  background-color: rgb(179, 156, 121);
 }
 
 .hover:hover {
@@ -20,6 +20,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
 
 .parallax-container {
   height: 100%vh;
@@ -41,6 +43,7 @@ section .content {
 .space {
   margin-top: 3%;
 }
+
 /*start login additions */
 
 #loginimg {
@@ -69,5 +72,6 @@ section .content {
     height: 250px;
   } */
 
-  /* end login additions */
-  /* end login additions */
+/* end login additions */
+
+/* end login additions */
