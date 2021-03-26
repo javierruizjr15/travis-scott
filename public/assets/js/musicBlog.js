@@ -1,17 +1,27 @@
 const axios = window.axios
 
+let currentUser = localStorage.getItem('currentUser')
+
 const getMusicBlogs = () => {
-  axios.get('/api/musicBlogs')
+  axios.get('/api/musicBlogs', {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
     .then(({ data: musicBlogs }) => {
       document.getElementById('musicBlogs').innerHTML = ''
       musicBlogs.forEach(musicBlog => {
         const blogElem = document.createElement('div')
+        blogElem.className = 'musicBlogDiv'
         blogElem.innerHTML = `
         <p>Title: ${musicBlog.title}</p>
         <p>Content: ${musicBlog.content}</p>
-        <p>Username: ${musicBlog.username}</p>`
+        <p>Username: ${currentUser}</p>
+        `
+        document.getElementById('musicBlogs').prepend(blogElem)
       })
     })
+    .catch(err => console.error(err))
 }
 
 document.getElementById('addMusicBlog').addEventListener('click', event => {
@@ -35,11 +45,10 @@ document.getElementById('addMusicBlog').addEventListener('click', event => {
     <p>Title: ${musicBlog.title}</p>
     <p>Name: test </p>
     <p>Content: ${musicBlog.content}</p>
-    <button class="btn btn-warning" data-bs-target="#updateModal" data-bs-toggle="modal" data-id="${musicBlog.id}">Update</button>
     <button class="btn btn-danger deletemusicBlog" data-id="${musicBlog.id}">Delete</button>
     <hr>
     `
-      document.getElementById('musicBlogs').append(blogElem)
+      document.getElementById('musicBlogs').prepend(blogElem)
       document.getElementById('title').value = ''
       document.getElementById('content').value = ''
     })
@@ -60,3 +69,5 @@ document.addEventListener('click', event => {
       .catch(err => console.error(err))
   }
 })
+
+getMusicBlogs()
