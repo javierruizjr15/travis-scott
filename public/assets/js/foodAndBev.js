@@ -60,8 +60,9 @@ document.getElementById('addFoodBevBlog').addEventListener('click', event => {
       blogElem.innerHTML = `
     
     <p>Title: ${blog.title}</p>
-    <p>Name: test </p>
     <p>Content: ${blog.content}</p>
+    <p>Username: ${currentUser} </p>
+    
     <button class="btn btn-danger deleteFoodBevBlog" data-id="${blog.id}">Delete</button>
     <hr>
     `
