@@ -1,13 +1,21 @@
 html {
+<<<<<<< HEAD
   background-color: darkgray;
 }
 
 .navbarBackground {
   background-color: darkgray;
+=======
+  background-color: rgb(219, 177, 114);
+}
+
+.navbarBackground {
+  background-color: rgb(219, 177, 114);
+>>>>>>> 60eca0e3503589de4e0fc19a90787e0d3f5da645
 }
 
 .containerWhite {
-  background-color: white;
+  background-color: rgb(179, 156, 121);
 }
 
 .hover:hover {
@@ -20,6 +28,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
 
 .parallax-container {
   height: 100%vh;
@@ -71,4 +81,6 @@ section .content {
   height: 100%;
 }
 
-/* end register additions */
+/* end login additions */
+
+/* end login additions */
