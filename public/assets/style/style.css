@@ -1,17 +1,15 @@
 html {
-<<<<<<< HEAD
-  background-color: darkgray;
+  <<<<<<< HEAD background-color: darkgray;
 }
 
 .navbarBackground {
   background-color: darkgray;
-=======
-  background-color: rgb(219, 177, 114);
+  =======background-color: rgb(219, 177, 114);
 }
 
 .navbarBackground {
   background-color: rgb(219, 177, 114);
->>>>>>> 60eca0e3503589de4e0fc19a90787e0d3f5da645
+  >>>>>>>60eca0e3503589de4e0fc19a90787e0d3f5da645
 }
 
 .containerWhite {
@@ -28,8 +26,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
 
 .parallax-container {
   height: 100%vh;
@@ -53,7 +49,6 @@ section .content {
 }
 
 /*start login additions */
-
 #loginimg {
   background-image: url('../images/Fortnite\ 4k.jpg');
   background-position: center top;
@@ -68,11 +63,9 @@ section .content {
 #loginPush {
   margin-top: 5%;
 }
-
 /* end login additions */
 
 /* start register additions */
-
 #registerimg {
   background-image: url('../images/mirror\ cropped\ astronomical.jpg');
   background-position: center;
@@ -80,7 +73,5 @@ section .content {
   background-size: cover;
   height: 100%;
 }
+/* end register additions */
 
-/* end login additions */
-
-/* end login additions */
