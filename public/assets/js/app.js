@@ -14,9 +14,12 @@ const getGeneralBlogs = () => {
         const blogElem = document.createElement('div')
         blogElem.className = 'generalBlogDiv'
         blogElem.innerHTML = `
+        
         <p>Title: ${generalBlog.title}</p>
         <p>Content: ${generalBlog.content}</p>
         <p>Username: ${currentUser}</p>
+        <button class="btn btn-danger deleteGeneralBlog" data-id="${generalBlog.id}">Delete</button>
+        <hr>
         `
       document.getElementById('generalBlogs').prepend(blogElem)
       })
@@ -40,11 +43,9 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
       const blogElem = document.createElement('div')
       blogElem.className = 'generalBlogDiv'
       blogElem.innerHTML = `
-    <hr>
     <p>Title: ${generalBlog.title}</p>
     <p>Content: ${generalBlog.content}</p>
     <p>Username: ${currentUser} </p>
-    <button class="btn btn-warning" data-bs-target="#updateModal" data-bs-toggle="modal" data-id="${generalBlog.id}">Update</button>
     <button class="btn btn-danger deleteGeneralBlog" data-id="${generalBlog.id}">Delete</button>
     <hr>
     `
