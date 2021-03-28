@@ -25,6 +25,8 @@ body {
 
 .parallax-container {
   height: 100%vh;
+  height: 700px;
+
 }
 
 section {
