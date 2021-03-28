@@ -43,11 +43,11 @@ document.getElementById('addMusicBlog').addEventListener('click', event => {
       const blogElem = document.createElement('div')
       blogElem.className = 'musicBlogDiv'
       blogElem.innerHTML = `
-    <p>Title: ${musicBlog.title}</p>
-    <p>Name: test </p>
-    <p>Content: ${musicBlog.content}</p>
-    <button class="btn btn-danger deletemusicBlog" data-id="${musicBlog.id}">Delete</button>
-    <hr>
+        <p>Title: ${musicBlog.title}</p>
+        <p>Content: ${musicBlog.content}</p>
+        <p>Username: ${currentUser}</p>
+        <button class="btn btn-danger deletemusicBlog" data-id="${musicBlog.id}">Delete</button>
+        <hr>
     `
       document.getElementById('musicBlogs').prepend(blogElem)
       document.getElementById('title').value = ''
