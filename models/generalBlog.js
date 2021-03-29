@@ -14,13 +14,8 @@ generalBlog.init(
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
-    createdAt: { 
-      type: DataTypes.DATE,
-      allowNull: false
-    }
 }, { sequelize, modelName: 'generalBlogs' })
 
 module.exports = generalBlog

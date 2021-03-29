@@ -14,7 +14,7 @@ foodBevBlog.init(
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
   }, { sequelize, modelName: 'foodBevBlogs' })
 

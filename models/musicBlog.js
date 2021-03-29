@@ -15,8 +15,7 @@ musicBlog.init(
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
   }, { sequelize, modelName: 'musicBlogs' })
 
