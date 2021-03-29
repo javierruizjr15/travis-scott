@@ -1,17 +1,30 @@
 const axios = window.axios
 
+let currentUser = localStorage.getItem('currentUser')
+
 const getGeneralBlogs = () => {
-  axios.get('/api/generalBlogs')
+  axios.get('/api/generalBlogs', {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
     .then(({ data: generalBlogs}) => {
       document.getElementById('generalBlogs').innerHTML = ''
       generalBlogs.forEach(generalBlog => {
         const blogElem = document.createElement('div')
+        blogElem.className = 'generalBlogDiv'
         blogElem.innerHTML = `
+        
         <p>Title: ${generalBlog.title}</p>
         <p>Content: ${generalBlog.content}</p>
-        <p>Username: ${generalBlog.username}</p>`
+        <p>Username: ${currentUser}</p>
+        <button class="btn btn-danger deleteGeneralBlog red accent-3" data-id="${generalBlog.id}">Delete</button>
+        <hr>
+        `
+      document.getElementById('generalBlogs').prepend(blogElem)
       })
     })
+    .catch(err => console.error(err))
 }
 
 document.getElementById('addGeneralBlog').addEventListener('click', event => {
@@ -30,17 +43,16 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
       const blogElem = document.createElement('div')
       blogElem.className = 'generalBlogDiv'
       blogElem.innerHTML = `
-    <hr>
     <p>Title: ${generalBlog.title}</p>
-    <p>Name: test </p>
     <p>Content: ${generalBlog.content}</p>
-    <button class="btn btn-warning" data-bs-target="#updateModal" data-bs-toggle="modal" data-id="${generalBlog.id}">Update</button>
-    <button class="btn btn-danger deleteGeneralBlog" data-id="${generalBlog.id}">Delete</button>
+    <p>Username: ${currentUser} </p>
+    <button class="btn btn-danger deleteGeneralBlog red accent-3" data-id="${generalBlog.id}">Delete</button>
     <hr>
     `
-    document.getElementById('generalBlogs').append(blogElem)
-    document.getElementById('title').value = ''
-    document.getElementById('content').value = ''
+    // prepend is oppoite of append - newest on top
+    document.getElementById('generalBlogs').prepend(blogElem)
+    document.getElementById('addTitle').value = ''
+    document.getElementById('addContent').value = ''
     })
     .catch(err => console.error(err))
 })
@@ -59,4 +71,4 @@ document.addEventListener('click', event => {
   }
 })
 
-//getGeneralBlogs()
+getGeneralBlogs()
