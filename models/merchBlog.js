@@ -3,10 +3,20 @@ const sequelize = require('../db')
 
 class merchBlog extends Model { }
 
-merchBlog.init({
-  title: DataTypes.STRING,
-  content: DataTypes.STRING,
-  name: DataTypes.STRING
-}, { sequelize, modelName: 'merchBlogs' })
+merchBlog.init(
+  {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+  }, { sequelize, modelName: 'merchBlogs' })
 
 module.exports = merchBlog

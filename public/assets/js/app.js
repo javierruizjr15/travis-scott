@@ -43,9 +43,9 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
       const blogElem = document.createElement('div')
       blogElem.className = 'generalBlogDiv'
       blogElem.innerHTML = `
-    <p>Title: ${generalBlog.title}</p>
-    <p>Content: ${generalBlog.content}</p>
-    <p>Username: ${currentUser} </p>
+    <h2>${generalBlog.title}</h2>
+    <p>${generalBlog.content}</p>
+    <p>By ${User.name} </p>
     <button class="btn btn-danger deleteGeneralBlog" data-id="${generalBlog.id}">Delete</button>
     <hr>
     `
@@ -72,3 +72,8 @@ document.addEventListener('click', event => {
 })
 
 getGeneralBlogs()
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems);
+});

@@ -13,6 +13,9 @@ merchBlog.belongsTo(User, { foreignKey: 'uid' })
 User.hasMany(foodBevBlog, { foreignKey: 'uid' })
 foodBevBlog.belongsTo(User, { foreignKey: 'uid' })
 
+User.hasMany(generalBlog, { foreignKey: 'uid' })
+generalBlog.belongsTo(User, { foreignKey: 'uid' })
+
 
 
 module.exports = { User, musicBlog, merchBlog, foodBevBlog, generalBlog }
