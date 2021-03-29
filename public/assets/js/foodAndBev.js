@@ -45,8 +45,8 @@ document.getElementById('addFoodBevBlog').addEventListener('click', event => {
       blogElem.className = 'foodBevDiv'
       blogElem.innerHTML = `
     
-    <p>Title: ${blog.title}</p>
-    <p>Content: ${blog.content}</p>
+    <p>Title: ${foodBevBlog.title}</p>
+    <p>Content: ${foodBevBlog.content}</p>
     <p>Username: ${currentUser} </p>
     
     <button class="btn btn-danger deleteFoodBevBlog red accent-3" data-id="${blog.id}">Delete</button>
