@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cactus Jack</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-      <link rel="stylesheet" href="assets/style/style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="row">
     <div class="col s1 m4"></div>
-  
+
     <!-- contact header starts here -->
 
     <div id="login-sizing" class="col s10 m4 center-align">
@@ -25,51 +25,52 @@
           <div class="brand-logo center black">Register</div>
         </div>
       </nav>
-  
-  <form class="loginBackG">
-    <p>
-      <label for="name">name</label>
-      <input class="center-align" type="text" name="name" id="name">
-    </p>
-    <p>
-      <label for="email">email</label>
-      <input class="center-align" type="email" name="email" id="email">
-    </p>
-    <p>
-      <label for="username">username</label>
-      <input class="center-align" type="text" name="username" id="username">
-    </p>
-    <p>
-      <label for="password">password</label>
-      <input class="center-align" type="password" name="password" id="password">
-    </p>
-    <p>
-      <a id="register" class="waves-effect waves-light btn black"><i class="material-icons left">child_care</i>Register Player</a>
-    </p>
-  </form>
 
-  <div class="center-align">
-    <a style="font-weight: bold" class="black white-text" href="./login.html">Have An Account? Login</a>
-  </div>
-</div>
+      <form class="loginBackG">
+        <p>
+          <label for="name">name</label>
+          <input class="center-align" type="text" name="name" id="name">
+        </p>
+        <p>
+          <label for="email">email</label>
+          <input class="center-align" type="email" name="email" id="email">
+        </p>
+        <p>
+          <label for="username">username</label>
+          <input class="center-align" type="text" name="username" id="username">
+        </p>
+        <p>
+          <label for="password">password</label>
+          <input class="center-align" type="password" name="password" id="password">
+        </p>
+        <p>
+          <a id="register" class="waves-effect waves-light btn black"><i
+              class="material-icons left">child_care</i>Register Player</a>
+        </p>
+      </form>
 
-<div class="col s1 m4"></div>
+      <div class="center-align">
+        <a style="font-weight: bold" class="black white-text" href="./login.html">Have An Account? Login</a>
+      </div>
+    </div>
+
+    <div class="col s1 m4"></div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
-    document.getElementById('register').addEventListener('click', event => {
-      event.preventDefault()
-      axios.post('/api/users/register', {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        username: document.getElementById('username').value,
-        password: document.getElementById('password').value
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById('register').addEventListener('click', event => {
+        event.preventDefault()
+        axios.post('/api/users/register', {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          username: document.getElementById('username').value,
+          password: document.getElementById('password').value
+        })
+          .then(() => window.location = './login.html')
+          .catch(err => console.error(err))
       })
-        .then(() => window.location = './login.html')
-        .catch(err => console.error(err))
-    })
-  </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
