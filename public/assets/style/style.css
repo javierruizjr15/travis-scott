@@ -1,15 +1,22 @@
 html {
+<<<<<<< HEAD
   <<<<<<< HEAD background-color: darkgray;
 }
 
 .navbarBackground {
   background-color: darkgray;
   =======background-color: rgb(219, 177, 114);
+=======
+  background-color: rgb(219, 177, 114);
+>>>>>>> ad9890c96354711642276fe4590625b9ff46626f
 }
 
 .navbarBackground {
   background-color: rgb(219, 177, 114);
+<<<<<<< HEAD
   >>>>>>>60eca0e3503589de4e0fc19a90787e0d3f5da645
+=======
+>>>>>>> ad9890c96354711642276fe4590625b9ff46626f
 }
 
 .containerWhite {
@@ -29,6 +36,8 @@ body {
 
 .parallax-container {
   height: 100%vh;
+  height: 700px;
+
 }
 
 section {
@@ -48,7 +57,6 @@ section .content {
   margin-top: 3%;
 }
 
-/*start login additions */
 #loginimg {
   background-image: url('../images/Fortnite\ 4k.jpg');
   background-position: center top;
@@ -63,9 +71,7 @@ section .content {
 #loginPush {
   margin-top: 5%;
 }
-/* end login additions */
 
-/* start register additions */
 #registerimg {
   background-image: url('../images/mirror\ cropped\ astronomical.jpg');
   background-position: center;
@@ -73,5 +79,4 @@ section .content {
   background-size: cover;
   height: 100%;
 }
-/* end register additions */
 

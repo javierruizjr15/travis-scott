@@ -44,8 +44,8 @@ document.getElementById('addMerchBlog').addEventListener('click', event => {
       blogElem.className = 'merchBlogDiv'
       blogElem.innerHTML = `
     <p>Title: ${merchBlog.title}</p>
-    <p>Name: test </p>
     <p>Content: ${merchBlog.content}</p>
+    <p>Userame: ${currentUser} </p>
     <button class="btn btn-danger deleteMerchBlog" data-id="${merchBlog.id}">Delete</button>
     <hr>
     `
