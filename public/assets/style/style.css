@@ -7,6 +7,7 @@ html {
   background-color: #F5F0EC;
 }
 
+
 .containerWhite {
   background-color: white;
 }
@@ -45,8 +46,6 @@ section .content {
   margin-top: 3%;
 }
 
-/*start login additions */
-
 #loginimg {
   background-image: url('../images/Fortnite\ 4k.jpg');
   background-position: center top;
@@ -61,10 +60,6 @@ section .content {
 #loginPush {
   margin-top: 5%;
 }
-
-/* end login additions */
-
-/* start register additions */
 
 #registerimg {
   background-image: url('../images/mirror\ cropped\ astronomical.jpg');
