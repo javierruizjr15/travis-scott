@@ -7,6 +7,6 @@ merchBlog.init({
   title: DataTypes.STRING,
   content: DataTypes.STRING,
   name: DataTypes.STRING
-}, { sequelize, modelName: 'merchBlogs' })
+  }, { sequelize, modelName: 'merchBlogs' })
 
 module.exports = merchBlog

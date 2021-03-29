@@ -16,15 +16,29 @@
   <nav>
     <div class="nav-wrapper navbarBackground">
       <a href="./index.html" class="black-text brand-logo"> <img
-          src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cactus_Jack_Records_-_Logo.svg" alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cactus_Jack_Records_-_Logo.svg" alt="logo"
           style="width: 75px; height: 50px;"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class='tab hover'><a class="black-text" href="./musicBlog.html">Music</a></li>
-        <li class='tab hover'><a class="black-text" href="./merchBlog.html">Merch</a></li>
-        <li class='tab hover'><a class="black-text" href="./foodAndBev.html">Food and Beverages</a></li>
-      </ul>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger" on:click={mobileNav}><i
+          class="material-icons">menu</i><a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class='tab hover'><a class="black-text" href="./musicBlog.html">Music</a></li>
+            <li class='tab hover'><a class="black-text" href="./merchBlog.html">Merch</a></li>
+            <li class='tab hover'><a class="black-text" href="./foodAndBev.html">Food and Beverages</a></li>
+          </ul>
+          <ul id="nav-mobile" class="left hide-on-med-and-down" id="login-register">
+            <li class='tab hover'><a class="black-text" href="login.html">Login</a></li>
+            <li class='tab hover'><a class="black-text" href="register.html">Register</a></li>
+          </ul>
     </div>
   </nav>
+  
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="musicBlog.html">Music</a></li>
+    <li><a href="merchBlog.html">Merch</a></li>
+    <li><a href="foodAndBev.html">Food and Beverages</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+  </ul>
 
   <div class="parallax-container">
     <div class="parallax"><img src="assets/images/fornite loaded.jpg" class="responsive-img"></div>

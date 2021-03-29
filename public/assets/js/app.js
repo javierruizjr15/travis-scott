@@ -8,7 +8,7 @@ const getGeneralBlogs = () => {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
   })
-    .then(({ data: generalBlogs}) => {
+    .then(({ data: generalBlogs }) => {
       document.getElementById('generalBlogs').innerHTML = ''
       generalBlogs.forEach(generalBlog => {
         const blogElem = document.createElement('div')
@@ -21,7 +21,7 @@ const getGeneralBlogs = () => {
         <button class="btn btn-danger deleteGeneralBlog red accent-3" data-id="${generalBlog.id}">Delete</button>
         <hr>
         `
-      document.getElementById('generalBlogs').prepend(blogElem)
+        document.getElementById('generalBlogs').prepend(blogElem)
       })
     })
     .catch(err => console.error(err))
@@ -30,15 +30,16 @@ const getGeneralBlogs = () => {
 document.getElementById('addGeneralBlog').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/generalBlogs', {
-    
+
     title: document.getElementById('addTitle').value,
-    content: document.getElementById('addContent').value},
+    content: document.getElementById('addContent').value
+  },
     {
-    headers: {
-      'Authorization': `Bearer ${localStorage.getItem('token')}`
-    }
-  })
-    
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+
     .then(({ data: generalBlog }) => {
       const blogElem = document.createElement('div')
       blogElem.className = 'generalBlogDiv'
@@ -49,10 +50,10 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
     <button class="btn btn-danger deleteGeneralBlog red accent-3" data-id="${generalBlog.id}">Delete</button>
     <hr>
     `
-    // prepend is oppoite of append - newest on top
-    document.getElementById('generalBlogs').prepend(blogElem)
-    document.getElementById('addTitle').value = ''
-    document.getElementById('addContent').value = ''
+      // prepend is oppoite of append - newest on top
+      document.getElementById('generalBlogs').prepend(blogElem)
+      document.getElementById('addTitle').value = ''
+      document.getElementById('addContent').value = ''
     })
     .catch(err => console.error(err))
 })
@@ -63,7 +64,8 @@ document.addEventListener('click', event => {
     axios.delete(`/api/generalBlogs/${id}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
-      }})
+      }
+    })
       .then(() => {
         event.target.parentNode.remove()
       })
@@ -72,3 +74,8 @@ document.addEventListener('click', event => {
 })
 
 getGeneralBlogs()
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems);
+});
