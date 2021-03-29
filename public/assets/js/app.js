@@ -18,7 +18,7 @@ const getGeneralBlogs = () => {
         <p>Title: ${generalBlog.title}</p>
         <p>Content: ${generalBlog.content}</p>
         <p>Username: ${currentUser}</p>
-        <button class="btn btn-danger deleteGeneralBlog" data-id="${generalBlog.id}">Delete</button>
+        <button class="btn btn-danger deleteGeneralBlog red accent-3" data-id="${generalBlog.id}">Delete</button>
         <hr>
         `
       document.getElementById('generalBlogs').prepend(blogElem)
@@ -43,10 +43,17 @@ document.getElementById('addGeneralBlog').addEventListener('click', event => {
       const blogElem = document.createElement('div')
       blogElem.className = 'generalBlogDiv'
       blogElem.innerHTML = `
+<<<<<<< HEAD
     <h2>${generalBlog.title}</h2>
     <p>${generalBlog.content}</p>
     <p>By ${User.name} </p>
     <button class="btn btn-danger deleteGeneralBlog" data-id="${generalBlog.id}">Delete</button>
+=======
+    <p>Title: ${generalBlog.title}</p>
+    <p>Content: ${generalBlog.content}</p>
+    <p>Username: ${currentUser} </p>
+    <button class="btn btn-danger deleteGeneralBlog red accent-3" data-id="${generalBlog.id}">Delete</button>
+>>>>>>> 1d80ac7dcd9429c0027467d7081ec7df01bf94d9
     <hr>
     `
     // prepend is oppoite of append - newest on top

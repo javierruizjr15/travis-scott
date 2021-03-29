@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Merchandise</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/style/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
+<<<<<<< HEAD
     <!--NavBar code-->
   
   <nav>
@@ -41,20 +46,38 @@
     
     <div class="parallax-container">
       <div class="parallax"><img src="assets/images/img1.jpeg"></div>
+=======
+  <!--NavBar code-->
+  <nav>
+    <div class="nav-wrapper navbarBackground">
+      <a href="./index.html" class="black-text brand-logo"> <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cactus_Jack_Records_-_Logo.svg" alt=""
+          style="width: 75px; height: 50px;"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class='tab hover'><a class="black-text" href="./musicBlog.html">Music</a></li>
+        <li class='tab hover'><a class="black-text" href="./merchBlog.html">Merch</a></li>
+        <li class='tab hover'><a class="black-text" href="./foodAndBev.html">Food and Beverages</a></li>
+      </ul>
+>>>>>>> 1d80ac7dcd9429c0027467d7081ec7df01bf94d9
     </div>
-    
-    <!-- POSTING BLOGS DIV -->
-    <div class="container space origin">
-      <div class="row containerWhite">
-        <div class="col s12">
-          <input id="addTitle" placeholder="title" type="text">
-          <input id="addContent" placeholder="content" type="text">
-          <button id="addMerchBlog" type="submit" class="btn red accent-3">Post</button>
-        </div>
-        <div class="merchBlogDiv col s6 space" id='merchBlogs'></div>
-        <img class='col s6 space' src="assets/images/calumOG.jpeg" alt="cactusShoes">
+  </nav>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/fornite loaded.jpg" class="responsive-img"></div>
+  </div>
+
+  <!-- POSTING BLOGS DIV -->
+  <div class="container space origin">
+    <div class="row containerWhite">
+      <div class="col s12">
+        <input id="addTitle" placeholder="title" type="text">
+        <input id="addContent" placeholder="content" type="text">
+        <button id="addMerchBlog" type="submit" class="btn red accent-3">Post</button>
       </div>
+      <div class="merchBlogDiv col s6 space" id='merchBlogs'></div>
+      <img class='col s6 space' src="assets/images/calumOG.jpeg" alt="cactusShoes">
     </div>
+<<<<<<< HEAD
     
     
     
@@ -92,5 +115,46 @@
         $('.parallax').parallax();
       });
     </script>
+=======
+  </div>
+
+  <hr>
+
+  <div class="container center">
+    <h2 class="black-text">Nike and Jordan Brand Collaboration</h2>
+    <p class="center black-text">Travis Scott's 2018 was the biggest year of his career so far. With Astrowrld's collab "Sicko Mode" with Drake landed him his first number one single. All the while, Scott's collaboration with Nike and Jordan has been picking up steam since.</p>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/travisShoes.jpeg" class="responsive-img"></div>
+  </div>
+
+  <div class="container center">
+    <h2 class="black-text">Collab with Fortnite.</h2>
+    <p class="center black-text">On April 23rd-25th, Travis Scott teamed up with Fortnite and did a live in game concert. Check it out here: <a href="https://www.youtube.com/watch?v=wYeFAlVC8qU" target="_blank">Fortnite Concert</a></p>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/Reverse Engineering Concert.jpeg" class="responsive-img"></div>
+  </div>
+
+  <div class="container center">
+    <h5 class="black-text">more shirts and sweatshirts...</h5>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/travisShirts1.jpeg" class="responsive-img"></div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.parallax').parallax();
+    });
+  </script>
+  <script src='./assets/js/merchBlog.js'></script>
+>>>>>>> 1d80ac7dcd9429c0027467d7081ec7df01bf94d9
 </body>
+
 </html>

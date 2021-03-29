@@ -1,13 +1,15 @@
 html {
-  background-color: rgb(219, 177, 114);
+  background-color: #F5F0EC;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navbarBackground {
-  background-color: rgb(219, 177, 114);
+  background-color: #F5F0EC;
 }
 
+
 .containerWhite {
-  background-color: rgb(179, 156, 121);
+  background-color: white;
 }
 
 .hover:hover {
@@ -23,12 +25,12 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
-
-
 
 .parallax-container {
   height: 100%vh;
+  height: 500px;
 }
 
 section {
@@ -48,8 +50,6 @@ section .content {
   margin-top: 3%;
 }
 
-/*start login additions */
-
 #loginimg {
   background-image: url('../images/Fortnite\ 4k.jpg');
   background-position: center top;
@@ -65,17 +65,16 @@ section .content {
   margin-top: 5%;
 }
 
-/* .card-img-sizing {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
+#registerimg {
+  background-image: url('../images/mirror\ cropped\ astronomical.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
-@media only screen and (min-width: 0px) (max-width: 475px) {
-  .card-img-sizing {
-    height: 250px;
-  } */
-
 /* end login additions */
 
 /* end login additions */
+
+/* end register additions */

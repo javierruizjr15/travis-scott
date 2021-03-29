@@ -17,7 +17,7 @@ const getMerchBlogs = () => {
         <p>Title: ${merchBlog.title}</p>
         <p>Content: ${merchBlog.content}</p>
         <p>Username: ${currentUser}</p>
-        <button class="btn btn-danger deleteMerchBlog" data-id="${merchBlog.id}">Delete</button>
+        <button class="btn btn-danger deleteMerchBlog red accent-3" data-id="${merchBlog.id}">Delete</button>
         <hr>
         `
         document.getElementById('merchBlogs').prepend(blogElem)
@@ -44,9 +44,9 @@ document.getElementById('addMerchBlog').addEventListener('click', event => {
       blogElem.className = 'merchBlogDiv'
       blogElem.innerHTML = `
     <p>Title: ${merchBlog.title}</p>
-    <p>Name: test </p>
     <p>Content: ${merchBlog.content}</p>
-    <button class="btn btn-danger deleteMerchBlog" data-id="${merchBlog.id}">Delete</button>
+    <p>Userame: ${currentUser} </p>
+    <button class="btn btn-danger deleteMerchBlog red accent-3" data-id="${merchBlog.id}">Delete</button>
     <hr>
     `
       document.getElementById('merchBlogs').append(blogElem)
